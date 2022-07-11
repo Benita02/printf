@@ -27,6 +27,10 @@ int _printf(const char *format, ...){
         case 's':
             count += print_string(va_arg(data, char *));
             break;
+        case '%':
+            /* print the character from the va_arguments */
+            count += _putchar('%');
+            break;
         default:
             break;
       }
