@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-  int n = _printf("Hello %c %s %%", 'A', "Hakeem");
+  int n = _printf("%i", 98);
   printf("\nn = %d \n", n);
 
   return (0);

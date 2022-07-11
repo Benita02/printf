@@ -31,6 +31,12 @@ int _printf(const char *format, ...){
             /* print the character from the va_arguments */
             count += _putchar('%');
             break;
+        case 'd':
+            count += print_decimal(va_arg(data, int));
+            break;
+        case 'i':
+            count += print_decimal(va_arg(data, int));
+            break;
         default:
             break;
       }
