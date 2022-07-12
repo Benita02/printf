@@ -8,7 +8,7 @@ int _printf(const char *format, ...){
   va_list data;
   va_start(data, format);
 
-  // _printf("%s", 'Hello')
+  /* _printf("%s", 'Hello') */
   
   for (i = 0; format[i] != '\0'; ){
     
@@ -36,6 +36,12 @@ int _printf(const char *format, ...){
             break;
         case 'i':
             count += print_decimal(va_arg(data, int));
+            break;
+        case 'b':
+            count += print_binary(va_arg(data, int));
+            break;
+        case 'u':
+            count += print_unsigned(va_arg(data, unsigned int));
             break;
         default:
             break;
